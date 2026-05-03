@@ -3,12 +3,10 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
 <title>Nayan Kumar Soren</title>
 
-<!-- EB Garamond -->
 <link href="https://fonts.googleapis.com/css2?family=EB+Garamond:wght@400;500;600;700&display=swap" rel="stylesheet">
-
-<!-- Icons -->
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 
 <style>
@@ -17,7 +15,6 @@
   --muted:#6b6b6b;
   --line:#e5e5e5;
   --accent:#1a73a8;
-  --bg:#ffffff;
 }
 
 body{
@@ -26,14 +23,12 @@ body{
   font-size:18px;
   line-height:1.75;
   color:var(--text);
-  background:var(--bg);
 }
 
 /* HEADER */
 header{
   display:flex;
   justify-content:space-between;
-  align-items:center;
   padding:16px 28px;
   border-bottom:1px solid var(--line);
 }
@@ -44,9 +39,9 @@ header{
 }
 
 .menu a{
+  margin-left:20px;
   text-decoration:none;
   color:#444;
-  font-size:16px;
 }
 
 .menu a:hover{
@@ -64,15 +59,9 @@ header{
 }
 
 /* SIDEBAR */
-.sidebar{
-  font-size:16px;
-}
-
 .photo{
   width:120px;
-  height:120px;
   border-radius:6px;
-  object-fit:cover;
 }
 
 .name{
@@ -83,41 +72,30 @@ header{
 
 .role{
   color:var(--muted);
-  margin:6px 0;
-}
-
-/* ICON LINKS */
-.links{
-  margin-top:16px;
 }
 
 .links a{
   display:flex;
   align-items:center;
   gap:10px;
+  margin:8px 0;
   text-decoration:none;
   color:#333;
-  margin:8px 0;
 }
 
 .links a:hover{
   color:var(--accent);
 }
 
-.links i{
-  width:18px;
-  text-align:center;
-}
-
 /* MAIN */
-.main{
-  max-width:720px;
+h1{
+  font-size:32px;
+  margin-bottom:10px;
 }
 
-h1{
-  font-size:34px;
-  font-weight:700;
-  margin-bottom:10px;
+h2{
+  margin-top:30px;
+  font-size:22px;
 }
 
 p{
@@ -125,11 +103,7 @@ p{
 }
 
 ul{
-  margin-top:10px;
-}
-
-li{
-  margin-bottom:8px;
+  padding-left:20px;
 }
 
 /* FOOTER */
@@ -137,24 +111,8 @@ footer{
   margin-top:50px;
   padding:20px;
   text-align:center;
-  font-size:14px;
-  color:var(--muted);
   border-top:1px solid var(--line);
-}
-
-/* MOBILE */
-@media (max-width:800px){
-  .wrap{
-    grid-template-columns:1fr;
-  }
-
-  .sidebar{
-    text-align:center;
-  }
-
-  .links a{
-    justify-content:center;
-  }
+  color:var(--muted);
 }
 </style>
 </head>
@@ -164,88 +122,147 @@ footer{
 <header>
   <div class="brand">Nayan Kumar Soren</div>
   <nav class="menu">
-    <a href="#">About</a>
+    <a href="#about">About</a>
+    <a href="#research">Research</a>
+    <a href="#teaching">Teaching</a>
   </nav>
 </header>
 
 <div class="wrap">
 
-  <!-- SIDEBAR -->
-  <aside class="sidebar">
+<!-- SIDEBAR -->
+<aside>
 
-    <img src="profile.jpg" class="photo">
+<img src="profile.jpg" class="photo">
 
-    <div class="name">Nayan Kumar Soren</div>
+<div class="name">Nayan Kumar Soren</div>
 
-    <div class="role">PhD Scholar in Economics</div>
-    <div class="role">India</div>
+<div class="role">Assistant Professor of Economics</div>
+<div class="role">PhD Scholar, IIT Delhi</div>
 
-    <div class="links">
+<div class="links">
 
-      <a href="#">
-        <i class="fas fa-file-alt"></i> CV
-      </a>
+<a href="https://giridihcollege.ac.in/subject/economics/" target="_blank">
+<i class="fas fa-university"></i> Institution
+</a>
 
-      <a href="#">
-        <i class="fab fa-google"></i> Google Scholar
-      </a>
+<a href="https://hss.iitd.ac.in/current-students" target="_blank">
+<i class="fas fa-graduation-cap"></i> IIT Delhi
+</a>
 
-      <a href="#">
-        <i class="fas fa-id-badge"></i> ORCID
-      </a>
+<a href="https://www.linkedin.com/in/nayansoren/" target="_blank">
+<i class="fab fa-linkedin"></i> LinkedIn
+</a>
 
-      <a href="#">
-        <i class="fab fa-linkedin"></i> LinkedIn
-      </a>
+<a href="https://github.com/nayansoren" target="_blank">
+<i class="fab fa-github"></i> GitHub
+</a>
 
-      <a href="#">
-        <i class="fab fa-github"></i> GitHub
-      </a>
+<a href="#">
+<i class="fab fa-google"></i> Google Scholar
+</a>
 
-      <a href="mailto:youremail@email.com">
-        <i class="fas fa-envelope"></i> Email
-      </a>
+<a href="#">
+<i class="fas fa-id-badge"></i> ORCID
+</a>
 
-    </div>
+<a href="#">
+<i class="fas fa-file-alt"></i> CV
+</a>
 
-  </aside>
+<a href="mailto:nayansoren@gmail.com">
+<i class="fas fa-envelope"></i> nayansoren@gmail.com
+</a>
 
-  <!-- MAIN CONTENT -->
-  <main class="main">
+<a href="mailto:nayansoren@hss.iitd.ac.in">
+<i class="fas fa-envelope"></i> nayansoren@hss.iitd.ac.in
+</a>
 
-    <h1>About</h1>
+</div>
 
-    <p>
-      I am working as an Assistant Professor of Economics at Giridih College, Giridih 
-      (A Constituent Unit of Vinoba Bhave University, Hazaribag).
-    </p>
+</aside>
 
-    <p>
-      I am also a doctoral student in economics at the Department of Humanities 
-      and Social Sciences, IIT Delhi.
-    </p>
+<!-- MAIN -->
+<main>
 
-    <p>
-      My research focuses on Development Economics, particularly at the intersection 
-      of agriculture, labour, and rural transformation.
-    </p>
+<!-- ABOUT -->
+<section id="about">
+<h1>About</h1>
 
-    <p>
-      My doctoral research examines agrarian change, structural marginalisation,
-      and livelihood reproduction with special reference to Jharkhand.
-    </p>
+<p>
+I am working as an Assistant Professor of Economics at 
+<a href="https://giridihcollege.ac.in/subject/economics/" target="_blank">
+Giridih College, Giridih
+</a>, a constituent unit of Vinoba Bhave University, Hazaribag.
+</p>
 
-    <h2>Research Interests</h2>
+<p>
+I am also a doctoral student in economics at 
+<a href="https://hss.iitd.ac.in/current-students" target="_blank">
+IIT Delhi
+</a>.
+</p>
 
-    <ul>
-      <li>Agrarian Political Economy</li>
-      <li>Development Economics</li>
-      <li>Labour Economics</li>
-      <li>Rural Transformation</li>
-      <li>Inequality and Regional Development</li>
-    </ul>
+<p>
+My research focuses on Development Economics, particularly agrarian change,
+labour markets, and structural transformation in India.
+</p>
+</section>
 
-  </main>
+<!-- RESEARCH -->
+<section id="research">
+<h1>Research</h1>
+
+<p>
+My work lies at the intersection of development economics, agrarian political economy,
+and labour studies.
+</p>
+
+<ul>
+<li>Agrarian Political Economy</li>
+<li>Development Economics</li>
+<li>Labour Economics</li>
+<li>Rural Transformation</li>
+<li>Inequality and Regional Development</li>
+</ul>
+
+</section>
+
+<!-- TEACHING -->
+<section id="teaching">
+<h1>Teaching</h1>
+
+<h2>PG Level Courses</h2>
+
+<p><strong>Co-Instructor</strong> for Research Methodology - 
+Department of Economics, St. Xavier’s College, Ranchi 
+<em>(January 2019 - April 2019)</em></p>
+
+<p><strong>Co-Instructor</strong> Mathematical Economics - 
+Department of Economics, Ranchi University 
+<em>(October 2015 - July 2016)</em></p>
+
+<p>Course Codes - <em>ECN 104, ECN 204</em></p>
+
+<h2>UG Level Courses</h2>
+
+<p><strong>Teaching Assistant</strong> for Microeconomics - 
+Department of Humanities and Social Sciences, IIT Delhi 
+<em>(October 2020 - January 2021)</em></p>
+
+<p>Course Code - HUL212</p>
+<p>Instructor - <em>Dr. Saptarshi Mukherjee</em></p>
+
+<p><strong>Teaching Assistant</strong> for Distribution and Growth - 
+Department of Humanities and Social Sciences, IIT Delhi 
+<em>(February 2021 - July 2021)</em></p>
+
+<p>Course Code - HUL312</p>
+<p>Instructor - <em>Prof. Jayan Jose Thomas</em></p>
+
+</section>
+
+</main>
 
 </div>
 
