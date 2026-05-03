@@ -5,137 +5,143 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Nayan Soren</title>
 
+<!-- EB Garamond Font -->
+<link href="https://fonts.googleapis.com/css2?family=EB+Garamond:wght@400;500;600;700&display=swap" rel="stylesheet">
+
 <style>
 :root{
-  --text:#2e2a26;
-  --muted:#6d655f;
-  --line:#e6ddd3;
-  --accent:#8a5a2b;
-  --bg:#f4efe8;
-  --card:#fbf7f2;
-}
-
-*{
-  box-sizing:border-box;
+  --text:#1f1f1f;
+  --muted:#6a6a6a;
+  --line:#e6e6e6;
+  --accent:#1a73a8;
+  --bg:#ffffff;
 }
 
 body{
   margin:0;
-  font-family: Georgia, "Times New Roman", serif;
-  font-size:15px;
+  font-family:'EB Garamond', serif;
+  font-size:18px;
   color:var(--text);
   background:var(--bg);
-  line-height:1.8;
+  line-height:1.75;
 }
 
 /* HEADER */
 header{
-  text-align:center;
-  padding:30px 20px 10px;
+  border-bottom:1px solid var(--line);
+  padding:16px 24px;
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
 }
 
 .brand{
-  font-size:32px;
-  font-style:italic;
-  letter-spacing:1px;
-}
-
-/* NAV */
-.menu{
-  margin-top:10px;
+  font-weight:700;
+  font-size:22px;
+  letter-spacing:0.5px;
 }
 
 .menu a{
-  margin:0 14px;
+  margin-left:22px;
   text-decoration:none;
-  color:var(--muted);
-  font-size:14px;
+  color:#444;
+  font-size:16px;
 }
 
 .menu a:hover{
   color:var(--accent);
 }
 
-/* MAIN WRAP */
+/* LAYOUT */
 .wrap{
-  max-width:900px;
-  margin:30px auto;
-  padding:30px;
-  background:var(--card);
-  border:1px solid var(--line);
+  max-width:1100px;
+  margin:40px auto;
+  display:grid;
+  grid-template-columns:260px 1fr;
+  gap:50px;
+  padding:0 24px;
 }
 
-/* PROFILE */
-.profile{
-  display:flex;
-  gap:25px;
-  align-items:center;
-  margin-bottom:30px;
-  border-bottom:1px solid var(--line);
-  padding-bottom:20px;
+/* SIDEBAR */
+.sidebar{
+  font-size:16px;
 }
 
 .photo{
   width:120px;
   height:120px;
-  border-radius:4px;
+  border-radius:50%;
   object-fit:cover;
 }
 
 .name{
-  font-size:26px;
-  margin:0;
+  font-size:24px;
+  font-weight:700;
+  margin-top:12px;
 }
 
 .role{
   color:var(--muted);
-  margin-top:6px;
+  margin:6px 0;
 }
 
-.links a{
-  margin-right:12px;
+.sidebar a{
+  display:block;
+  margin:6px 0;
   text-decoration:none;
-  color:var(--accent);
-  font-size:14px;
+  color:#333;
 }
 
-/* CONTENT */
+.sidebar a:hover{
+  color:var(--accent);
+}
+
+/* MAIN */
+.main{
+  max-width:720px;
+}
+
 h1{
-  font-size:26px;
-  margin-bottom:10px;
+  font-size:36px;
+  font-weight:700;
+  margin-bottom:12px;
+}
+
+.meta{
+  font-size:14px;
+  color:var(--muted);
+  margin-bottom:20px;
 }
 
 h2{
-  font-size:20px;
-  margin-top:25px;
+  margin-top:32px;
+  font-size:24px;
+  font-weight:700;
   border-bottom:1px solid var(--line);
   padding-bottom:4px;
 }
 
-p, li{
-  font-size:15px;
-}
-
-a{
-  color:var(--accent);
-}
-
-ul{
-  padding-left:18px;
+p{
+  margin-bottom:18px;
 }
 
 /* FOOTER */
 footer{
+  border-top:1px solid var(--line);
+  margin-top:50px;
+  padding:20px;
   text-align:center;
-  margin:40px 0;
+  font-size:14px;
   color:var(--muted);
-  font-size:13px;
 }
 
 /* MOBILE */
-@media (max-width:700px){
-  .profile{
-    flex-direction:column;
+@media (max-width:800px){
+  .wrap{
+    grid-template-columns:1fr;
+  }
+
+  .sidebar{
     text-align:center;
   }
 }
@@ -147,75 +153,80 @@ footer{
 <header>
   <div class="brand">Nayan Soren</div>
   <nav class="menu">
-    <a href="#research">Research</a>
-    <a href="#teaching">Teaching</a>
-    <a href="#cv">CV</a>
-    <a href="#contact">Contact</a>
+    <a href="#">About</a>
+    <a href="#">Research</a>
+    <a href="#">Posts</a>
+    <a href="#">Contact</a>
   </nav>
 </header>
 
 <div class="wrap">
 
-  <!-- PROFILE -->
-  <div class="profile">
-    <img class="photo" src="profile.jpg" alt="Profile Photo">
+  <!-- SIDEBAR -->
+  <aside class="sidebar">
 
-    <div>
-      <h2 class="name">Nayan Soren</h2>
-      <div class="role">PhD Scholar in Economics • India</div>
+    <img src="profile.jpg" class="photo">
 
-      <div class="links">
-        <a href="mailto:youremail@email.com">Email</a>
-        <a href="#">Google Scholar</a>
-        <a href="#">ORCID</a>
-        <a href="#">LinkedIn</a>
-      </div>
+    <div class="name">Nayan Soren</div>
+
+    <div class="role">
+      PhD Scholar in Economics
     </div>
-  </div>
 
-  <!-- CONTENT -->
-  <h1>Welcome</h1>
+    <div class="role">India</div>
 
-  <p>
-    I am a researcher working in development economics, agrarian political economy,
-    labour markets, and structural transformation in India.
-  </p>
+    <a href="#">CV</a>
+    <a href="#">Google Scholar</a>
+    <a href="#">ORCID</a>
+    <a href="#">ResearchGate</a>
+    <a href="#">LinkedIn</a>
+    <a href="#">GitHub</a>
+    <a href="mailto:youremail@email.com">Email</a>
 
-  <p>
-    My doctoral research examines agrarian change, structural marginalisation,
-    and livelihood reproduction with special reference to Jharkhand.
-  </p>
+  </aside>
 
-  <h2 id="research">Research Interests</h2>
-  <ul>
-    <li>Agrarian Political Economy</li>
-    <li>Development Economics</li>
-    <li>Labour Economics</li>
-    <li>Rural Transformation</li>
-    <li>Inequality and Regional Development</li>
-  </ul>
+  <!-- MAIN -->
+  <main class="main">
 
-  <h2 id="teaching">Teaching</h2>
-  <p>
-    Economics of Development, Statistics, Indian Economy,
-    Political Economy.
-  </p>
+    <h1>Welcome to my website</h1>
 
-  <h2 id="cv">Curriculum Vitae</h2>
-  <p>
-    <a href="#">Download CV (PDF)</a>
-  </p>
+    <div class="meta">Updated: 2026</div>
 
-  <h2 id="contact">Contact</h2>
-  <p>
-    Reach me at
-    <a href="mailto:youremail@email.com">youremail@email.com</a>
-  </p>
+    <p>
+      I am a researcher working in development economics, agrarian political economy,
+      labour markets, and structural transformation in India.
+    </p>
+
+    <p>
+      My doctoral research examines agrarian change, structural marginalisation,
+      and livelihood reproduction with special reference to Jharkhand.
+    </p>
+
+    <h2>Research Interests</h2>
+
+    <p>
+      Agrarian Political Economy, Development Economics, Labour Economics,
+      Rural Transformation, Inequality and Regional Development.
+    </p>
+
+    <h2>Teaching</h2>
+
+    <p>
+      Economics of Development, Statistics, Indian Economy, Political Economy.
+    </p>
+
+    <h2>Posts</h2>
+
+    <p>
+      Coming soon: blog posts on research, fieldwork, and ideas.
+    </p>
+
+  </main>
 
 </div>
 
 <footer>
-© 2026 Nayan Soren
+© 2026 Nayan Soren • Built with GitHub Pages
 </footer>
 
 </body>
