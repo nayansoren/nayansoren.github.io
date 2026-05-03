@@ -3,16 +3,19 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Nayan Soren</title>
+<title>Nayan Kumar Soren</title>
 
-<!-- EB Garamond Font -->
+<!-- EB Garamond -->
 <link href="https://fonts.googleapis.com/css2?family=EB+Garamond:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+<!-- Icons -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 
 <style>
 :root{
   --text:#1f1f1f;
-  --muted:#6a6a6a;
-  --line:#e6e6e6;
+  --muted:#6b6b6b;
+  --line:#e5e5e5;
   --accent:#1a73a8;
   --bg:#ffffff;
 }
@@ -21,28 +24,26 @@ body{
   margin:0;
   font-family:'EB Garamond', serif;
   font-size:18px;
+  line-height:1.75;
   color:var(--text);
   background:var(--bg);
-  line-height:1.75;
 }
 
 /* HEADER */
 header{
-  border-bottom:1px solid var(--line);
-  padding:16px 24px;
   display:flex;
   justify-content:space-between;
   align-items:center;
+  padding:16px 28px;
+  border-bottom:1px solid var(--line);
 }
 
 .brand{
-  font-weight:700;
   font-size:22px;
-  letter-spacing:0.5px;
+  font-weight:700;
 }
 
 .menu a{
-  margin-left:22px;
   text-decoration:none;
   color:#444;
   font-size:16px;
@@ -58,7 +59,7 @@ header{
   margin:40px auto;
   display:grid;
   grid-template-columns:260px 1fr;
-  gap:50px;
+  gap:60px;
   padding:0 24px;
 }
 
@@ -70,14 +71,14 @@ header{
 .photo{
   width:120px;
   height:120px;
-  border-radius:50%;
+  border-radius:6px;
   object-fit:cover;
 }
 
 .name{
   font-size:24px;
   font-weight:700;
-  margin-top:12px;
+  margin-top:10px;
 }
 
 .role{
@@ -85,15 +86,27 @@ header{
   margin:6px 0;
 }
 
-.sidebar a{
-  display:block;
-  margin:6px 0;
-  text-decoration:none;
-  color:#333;
+/* ICON LINKS */
+.links{
+  margin-top:16px;
 }
 
-.sidebar a:hover{
+.links a{
+  display:flex;
+  align-items:center;
+  gap:10px;
+  text-decoration:none;
+  color:#333;
+  margin:8px 0;
+}
+
+.links a:hover{
   color:var(--accent);
+}
+
+.links i{
+  width:18px;
+  text-align:center;
 }
 
 /* MAIN */
@@ -102,37 +115,31 @@ header{
 }
 
 h1{
-  font-size:36px;
+  font-size:34px;
   font-weight:700;
-  margin-bottom:12px;
-}
-
-.meta{
-  font-size:14px;
-  color:var(--muted);
-  margin-bottom:20px;
-}
-
-h2{
-  margin-top:32px;
-  font-size:24px;
-  font-weight:700;
-  border-bottom:1px solid var(--line);
-  padding-bottom:4px;
+  margin-bottom:10px;
 }
 
 p{
   margin-bottom:18px;
 }
 
+ul{
+  margin-top:10px;
+}
+
+li{
+  margin-bottom:8px;
+}
+
 /* FOOTER */
 footer{
-  border-top:1px solid var(--line);
   margin-top:50px;
   padding:20px;
   text-align:center;
   font-size:14px;
   color:var(--muted);
+  border-top:1px solid var(--line);
 }
 
 /* MOBILE */
@@ -144,6 +151,10 @@ footer{
   .sidebar{
     text-align:center;
   }
+
+  .links a{
+    justify-content:center;
+  }
 }
 </style>
 </head>
@@ -151,12 +162,9 @@ footer{
 <body>
 
 <header>
-  <div class="brand">Nayan Soren</div>
+  <div class="brand">Nayan Kumar Soren</div>
   <nav class="menu">
     <a href="#">About</a>
-    <a href="#">Research</a>
-    <a href="#">Posts</a>
-    <a href="#">Contact</a>
   </nav>
 </header>
 
@@ -167,34 +175,59 @@ footer{
 
     <img src="profile.jpg" class="photo">
 
-    <div class="name">Nayan Soren</div>
+    <div class="name">Nayan Kumar Soren</div>
 
-    <div class="role">
-      PhD Scholar in Economics
-    </div>
-
+    <div class="role">PhD Scholar in Economics</div>
     <div class="role">India</div>
 
-    <a href="#">CV</a>
-    <a href="#">Google Scholar</a>
-    <a href="#">ORCID</a>
-    <a href="#">ResearchGate</a>
-    <a href="#">LinkedIn</a>
-    <a href="#">GitHub</a>
-    <a href="mailto:youremail@email.com">Email</a>
+    <div class="links">
+
+      <a href="#">
+        <i class="fas fa-file-alt"></i> CV
+      </a>
+
+      <a href="#">
+        <i class="fab fa-google"></i> Google Scholar
+      </a>
+
+      <a href="#">
+        <i class="fas fa-id-badge"></i> ORCID
+      </a>
+
+      <a href="#">
+        <i class="fab fa-linkedin"></i> LinkedIn
+      </a>
+
+      <a href="#">
+        <i class="fab fa-github"></i> GitHub
+      </a>
+
+      <a href="mailto:youremail@email.com">
+        <i class="fas fa-envelope"></i> Email
+      </a>
+
+    </div>
 
   </aside>
 
-  <!-- MAIN -->
+  <!-- MAIN CONTENT -->
   <main class="main">
 
-    <h1>Welcome to my website</h1>
-
-    <div class="meta">Updated: 2026</div>
+    <h1>About</h1>
 
     <p>
-      I am a researcher working in development economics, agrarian political economy,
-      labour markets, and structural transformation in India.
+      I am working as an Assistant Professor of Economics at Giridih College, Giridih 
+      (A Constituent Unit of Vinoba Bhave University, Hazaribag).
+    </p>
+
+    <p>
+      I am also a doctoral student in economics at the Department of Humanities 
+      and Social Sciences, IIT Delhi.
+    </p>
+
+    <p>
+      My research focuses on Development Economics, particularly at the intersection 
+      of agriculture, labour, and rural transformation.
     </p>
 
     <p>
@@ -204,29 +237,20 @@ footer{
 
     <h2>Research Interests</h2>
 
-    <p>
-      Agrarian Political Economy, Development Economics, Labour Economics,
-      Rural Transformation, Inequality and Regional Development.
-    </p>
-
-    <h2>Teaching</h2>
-
-    <p>
-      Economics of Development, Statistics, Indian Economy, Political Economy.
-    </p>
-
-    <h2>Posts</h2>
-
-    <p>
-      Coming soon: blog posts on research, fieldwork, and ideas.
-    </p>
+    <ul>
+      <li>Agrarian Political Economy</li>
+      <li>Development Economics</li>
+      <li>Labour Economics</li>
+      <li>Rural Transformation</li>
+      <li>Inequality and Regional Development</li>
+    </ul>
 
   </main>
 
 </div>
 
 <footer>
-© 2026 Nayan Soren • Built with GitHub Pages
+© 2026 Nayan Kumar Soren
 </footer>
 
 </body>
