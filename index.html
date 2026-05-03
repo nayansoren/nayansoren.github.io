@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Nayan Soren</title>
+
+<style>
+:root{
+  --text:#2e2a26;
+  --muted:#6d655f;
+  --line:#e6ddd3;
+  --accent:#8a5a2b;
+  --bg:#f4efe8;
+  --card:#fbf7f2;
+}
+
+*{
+  box-sizing:border-box;
+}
+
+body{
+  margin:0;
+  font-family: Georgia, "Times New Roman", serif;
+  font-size:15px;
+  color:var(--text);
+  background:var(--bg);
+  line-height:1.8;
+}
+
+/* HEADER */
+header{
+  text-align:center;
+  padding:30px 20px 10px;
+}
+
+.brand{
+  font-size:32px;
+  font-style:italic;
+  letter-spacing:1px;
+}
+
+/* NAV */
+.menu{
+  margin-top:10px;
+}
+
+.menu a{
+  margin:0 14px;
+  text-decoration:none;
+  color:var(--muted);
+  font-size:14px;
+}
+
+.menu a:hover{
+  color:var(--accent);
+}
+
+/* MAIN WRAP */
+.wrap{
+  max-width:900px;
+  margin:30px auto;
+  padding:30px;
+  background:var(--card);
+  border:1px solid var(--line);
+}
+
+/* PROFILE */
+.profile{
+  display:flex;
+  gap:25px;
+  align-items:center;
+  margin-bottom:30px;
+  border-bottom:1px solid var(--line);
+  padding-bottom:20px;
+}
+
+.photo{
+  width:120px;
+  height:120px;
+  border-radius:4px;
+  object-fit:cover;
+}
+
+.name{
+  font-size:26px;
+  margin:0;
+}
+
+.role{
+  color:var(--muted);
+  margin-top:6px;
+}
+
+.links a{
+  margin-right:12px;
+  text-decoration:none;
+  color:var(--accent);
+  font-size:14px;
+}
+
+/* CONTENT */
+h1{
+  font-size:26px;
+  margin-bottom:10px;
+}
+
+h2{
+  font-size:20px;
+  margin-top:25px;
+  border-bottom:1px solid var(--line);
+  padding-bottom:4px;
+}
+
+p, li{
+  font-size:15px;
+}
+
+a{
+  color:var(--accent);
+}
+
+ul{
+  padding-left:18px;
+}
+
+/* FOOTER */
+footer{
+  text-align:center;
+  margin:40px 0;
+  color:var(--muted);
+  font-size:13px;
+}
+
+/* MOBILE */
+@media (max-width:700px){
+  .profile{
+    flex-direction:column;
+    text-align:center;
+  }
+}
+</style>
+</head>
+
+<body>
+
+<header>
+  <div class="brand">Nayan Soren</div>
+  <nav class="menu">
+    <a href="#research">Research</a>
+    <a href="#teaching">Teaching</a>
+    <a href="#cv">CV</a>
+    <a href="#contact">Contact</a>
+  </nav>
+</header>
+
+<div class="wrap">
+
+  <!-- PROFILE -->
+  <div class="profile">
+    <img class="photo" src="profile.jpg" alt="Profile Photo">
+
+    <div>
+      <h2 class="name">Nayan Soren</h2>
+      <div class="role">PhD Scholar in Economics • India</div>
+
+      <div class="links">
+        <a href="mailto:youremail@email.com">Email</a>
+        <a href="#">Google Scholar</a>
+        <a href="#">ORCID</a>
+        <a href="#">LinkedIn</a>
+      </div>
+    </div>
+  </div>
+
+  <!-- CONTENT -->
+  <h1>Welcome</h1>
+
+  <p>
+    I am a researcher working in development economics, agrarian political economy,
+    labour markets, and structural transformation in India.
+  </p>
+
+  <p>
+    My doctoral research examines agrarian change, structural marginalisation,
+    and livelihood reproduction with special reference to Jharkhand.
+  </p>
+
+  <h2 id="research">Research Interests</h2>
+  <ul>
+    <li>Agrarian Political Economy</li>
+    <li>Development Economics</li>
+    <li>Labour Economics</li>
+    <li>Rural Transformation</li>
+    <li>Inequality and Regional Development</li>
+  </ul>
+
+  <h2 id="teaching">Teaching</h2>
+  <p>
+    Economics of Development, Statistics, Indian Economy,
+    Political Economy.
+  </p>
+
+  <h2 id="cv">Curriculum Vitae</h2>
+  <p>
+    <a href="#">Download CV (PDF)</a>
+  </p>
+
+  <h2 id="contact">Contact</h2>
+  <p>
+    Reach me at
+    <a href="mailto:youremail@email.com">youremail@email.com</a>
+  </p>
+
+</div>
+
+<footer>
+© 2026 Nayan Soren
+</footer>
+
+</body>
+</html>
